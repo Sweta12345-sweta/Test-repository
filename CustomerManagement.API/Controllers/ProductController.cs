@@ -28,7 +28,7 @@ namespace CustomerManagement.API.Controllers
            return Ok(response.Data);
         }
 
-        [HttpGet()]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             var response = await _service.GetByIdAsync(id);
